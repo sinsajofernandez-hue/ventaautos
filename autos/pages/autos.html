@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autos - AutoMotors BO</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="app-body">
+
+    <header class="main-header">
+        <div class="logo">
+            <h1>Auto<span>Motors</span></h1>
+        </div>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <nav class="main-nav" id="mainNav">
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="autos.html" class="active">Autos</a></li>
+                <li class="solo-admin"><a href="clientes.html">Clientes</a></li>
+                <li><a href="#" id="btnCerrarSesion" class="btn-logout">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="layout-container">
+        <main class="content-area">
+            <section class="page-panel">
+                <h2>Catálogo de Autos</h2>
+
+                <div class="filter-bar">
+                    <button type="button" class="filter-btn active" data-filter="todos">Todos</button>
+                    <button type="button" class="filter-btn" data-filter="sedan">Sedán / Hatchback</button>
+                    <button type="button" class="filter-btn" data-filter="camioneta">Camionetas / SUV</button>
+                    <button type="button" class="filter-btn" data-filter="deportivo">Deportivos</button>
+                </div>
+
+                <div class="cards-grid">
+                    <article class="auto-card" data-categoria="sedan">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=600&q=80" alt="Toyota Corolla 2024">
+                        <div class="auto-info">
+                            <h3>Toyota Corolla 2024</h3>
+                            <p class="price">$us 22,500</p>
+                            <p>Sedán • Automático • Gasolina</p>
+                            <button type="button" class="btn-primary btn-comprar" data-auto="Toyota Corolla 2024" data-precio="22500">Seleccionar Auto</button>
+                        </div>
+                    </article>
+
+                    <article class="auto-card" data-categoria="sedan">
+                        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=600&q=80" alt="Suzuki Swift GLX">
+                        <div class="auto-info">
+                            <h3>Suzuki Swift GLX</h3>
+                            <p class="price">$us 16,800</p>
+                            <p>Hatchback • Económico</p>
+                            <button type="button" class="btn-primary btn-comprar" data-auto="Suzuki Swift GLX" data-precio="16800">Seleccionar Auto</button>
+                        </div>
+                    </article>
+
+                    <article class="auto-card" data-categoria="camioneta">
+                        <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=600&q=80" alt="Ford Ranger XLT 4x4">
+                        <div class="auto-info">
+                            <h3>Ford Ranger XLT 4x4</h3>
+                            <p class="price">$us 38,900</p>
+                            <p>Camioneta • Diésel • 4x4</p>
+                            <button type="button" class="btn-primary btn-comprar" data-auto="Ford Ranger XLT 4x4" data-precio="38900">Seleccionar Auto</button>
+                        </div>
+                    </article>
+
+                    <article class="auto-card" data-categoria="camioneta">
+                        <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=600&q=80" alt="Toyota RAV4 Adventure">
+                        <div class="auto-info">
+                            <h3>Toyota RAV4 Adventure</h3>
+                            <p class="price">$us 34,200</p>
+                            <p>SUV • AWD</p>
+                            <button type="button" class="btn-primary btn-comprar" data-auto="Toyota RAV4 Adventure" data-precio="34200">Seleccionar Auto</button>
+                        </div>
+                    </article>
+
+                    <article class="auto-card" data-categoria="deportivo">
+                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=80" alt="Chevrolet Camaro SS">
+                        <div class="auto-info">
+                            <h3>Chevrolet Camaro SS</h3>
+                            <p class="price">$us 45,000</p>
+                            <p>Deportivo • V8</p>
+                            <button type="button" class="btn-primary btn-comprar" data-auto="Chevrolet Camaro SS" data-precio="45000">Seleccionar Auto</button>
+                        </div>
+                    </article>
+
+                    <article class="auto-card" data-categoria="deportivo">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="Porsche 911 Carrera">
+                        <div class="auto-info">
+                            <h3>Porsche 911 Carrera</h3>
+                            <p class="price">$us 78,000</p>
+                            <p>Deportivo de Lujo</p>
+                            <button type="button" class="btn-primary btn-comprar" data-auto="Porsche 911 Carrera" data-precio="78000">Seleccionar Auto</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <section class="widget">
+                <h3>Compra / Reserva</h3>
+                <form id="formCompra">
+                    <div class="form-group">
+                        <label for="autoSeleccionado">Auto Elegido:</label>
+                        <input type="text" id="autoSeleccionado" readonly placeholder="Selecciona un auto">
+                    </div>
+                    <div class="form-group">
+                        <label for="precioSeleccionado">Precio ($us):</label>
+                        <input type="text" id="precioSeleccionado" readonly placeholder="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="compradorNombre">Nombre del Comprador:</label>
+                        <input type="text" id="compradorNombre" required placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="metodoPago">Pago:</label>
+                        <select id="metodoPago" class="form-select">
+                            <option value="Contado">Contado</option>
+                            <option value="Transferencia / QR">Transferencia / QR</option>
+                            <option value="Reserva / Adelanto">Reserva / Adelanto</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Confirmar</button>
+                </form>
+                <div id="confirmacionCompra" class="success-msg"></div>
+            </section>
+        </aside>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 AutoMotors BO - Instituto Tecnológico Bolivia Mar</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

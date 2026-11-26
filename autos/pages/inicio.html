@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - AutoMotors BO</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <h1>Auto<span>Motors</span></h1>
+        </div>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <nav class="main-nav" id="mainNav">
+            <ul>
+                <li><a href="inicio.html" class="active">Inicio</a></li>
+                <li><a href="autos.html">Autos</a></li>
+                <li class="solo-admin"><a href="clientes.html">Clientes</a></li>
+                <li><a href="#" id="btnCerrarSesion" class="btn-logout">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="layout-container">
+        <main class="content-area">
+            <section class="hero-banner">
+                <h2>AutoMotors BO</h2>
+                <p>Sistema de venta y reserva de vehículos.</p>
+                <a href="autos.html" class="btn-primary">Ver Autos</a>
+            </section>
+
+            <section class="featured-section">
+                <h2>Auto Destacado</h2>
+                <div class="cards-grid">
+                    <article class="auto-card">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=600&q=80" alt="Toyota Corolla 2024">
+                        <div class="auto-info">
+                            <h3>Toyota Corolla 2024</h3>
+                            <p class="price">$us 22,500</p>
+                            <p>Sedán • Automático • Gasolina</p>
+                            <a href="autos.html" class="btn-secondary">Ver Más</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <section class="widget">
+                <h3>Usuario Conectado</h3>
+                <p><strong>Cuenta:</strong> <span id="userDisplay">Cargando...</span></p>
+                <p><strong>Sucursal:</strong> Bolivia</p>
+            </section>
+        </aside>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 AutoMotors BO</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
